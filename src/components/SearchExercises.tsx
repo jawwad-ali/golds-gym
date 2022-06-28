@@ -48,6 +48,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: Props) => {
           exercise.bodyPart.toLowerCase().includes(search) ||
           exercise.equipment.toLowerCase().includes(search)
       );
+      
+      window.scrollTo({ top: 1800, behavior: "smooth" });
       setSearch("");
       setExercises(searchedExercises);
     }
@@ -111,4 +113,3 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: Props) => {
 };
 
 export default SearchExercises;
-// 58.38

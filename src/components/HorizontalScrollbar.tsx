@@ -14,11 +14,11 @@ interface IncomingData {
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
   return (
-    <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
-    </Typography>
-  );
-};
+    <Typography onClick={() => scrollPrev()} className="right-arrow"> 
+      <img src={LeftArrowIcon} alt="right-arrow" /> 
+    </Typography>  
+  ); 
+}; 
 
 const RightArrow = () => {
   const { scrollNext } = useContext(VisibilityContext);
@@ -31,7 +31,7 @@ const RightArrow = () => {
 
 const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }: IncomingData) => {
   return (
-    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}> 
       {data.map((item: string) => (
         <Box key={item} itemID={item} title={item} m="0 40px">
           <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
@@ -41,5 +41,4 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }: IncomingData) => {
   );
 };
 
-// 1.01.49
 export default HorizontalScrollbar;

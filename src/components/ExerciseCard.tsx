@@ -5,10 +5,10 @@ import { Button, Stack, Typography } from "@mui/material";
 interface ExerciseCardData {
   name: string;
   id: string;
-  gifUrl: string;
+  gifUrl: string; 
   bodyPart: string;
   target: string;
-}
+}   
 
 interface ExerciseCard {
   exercise: ExerciseCardData;
@@ -50,7 +50,7 @@ const ExerciseCard: FC<ExerciseCard> = ({ exercise }) => {
         ml="21px"
         color="#000"
         fontWeight="bold"
-        mt="11px"
+        mt="11px" 
         pb="10px"
         textTransform="capitalize"
         fontSize="24px"

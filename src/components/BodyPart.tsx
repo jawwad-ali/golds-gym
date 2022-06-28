@@ -11,7 +11,6 @@ interface BodyPart {
 const BodyParts = ({ item, bodyPart, setBodyPart }: BodyPart) => {
   return (
     <Stack
-      // typeof="button"
       alignItems="center"
       justifyContent="center"
       className="bodyPart-card"
@@ -47,4 +46,3 @@ const BodyParts = ({ item, bodyPart, setBodyPart }: BodyPart) => {
 };
 
 export default BodyParts;
-// 1.09.01
