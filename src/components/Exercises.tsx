@@ -19,7 +19,7 @@ interface Exercise {
 
 const Exercises = ({ setExercises, bodyPart, exercises }: Exercise) => {
 
-  // Pagination
+  // Pagination 
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;  
 
@@ -40,7 +40,7 @@ const Exercises = ({ setExercises, bodyPart, exercises }: Exercise) => {
   // Select Exercise by BodyPart
   useEffect(() => {
     const fetchExerciseByCategory = async () => {
-      let exerciseData = []
+      let exerciseData = [] 
 
       if(bodyPart === "all"){
         exerciseData = await fetchData("https://exercisedb.p.rapidapi.com/exercises",
@@ -91,5 +91,3 @@ const Exercises = ({ setExercises, bodyPart, exercises }: Exercise) => {
 };
 
 export default Exercises;
-// 1.27.44
-// 1.32.46

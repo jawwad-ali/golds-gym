@@ -18,17 +18,18 @@ interface ExerciseData {
 }
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: Props) => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); 
   const [bodyParts, setBodyParts] = useState<string[]>([]);
 
   useEffect(() => {
-    // display Exercises
+    
+    // display Exercises 
     const fetchExerciseData = async () => {
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
-      );
-      setBodyParts(["all", ...bodyPartsData]);
+      ); 
+      setBodyParts(["all", ...bodyPartsData]); 
     };
     fetchExerciseData();
   }, []);
