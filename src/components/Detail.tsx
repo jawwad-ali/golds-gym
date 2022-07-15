@@ -1,22 +1,20 @@
 import { Typography, Stack, Button } from "@mui/material";
 import BodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/target.png";
-import EquipmentImage from "../assets/icons/equipment.png";
-
-// interface ExerciseDetailProps {
-//   target: string;
-//   bodyPart: string;
-//   gifUrl: string;
-//   name: string;
-//   equipment: string;
-// }
+import EquipmentImage from "../assets/icons/equipment.png"; 
 
 interface IDetailProps {
-  exerciseDetail: {};
+  exerciseDetail: {
+    name?: string;
+    bodyPart?: string; 
+    target?: string;  
+    gifUrl?: string;
+    equipment?: string;
+  };
 }
 
 const Detail = ({ exerciseDetail }: IDetailProps) => {
-  const { bodyPart, target, gifUrl, equipment, name }: any = exerciseDetail;
+  const { bodyPart, target, gifUrl, equipment, name } = exerciseDetail;
 
   const extraDetail = [
     {

@@ -5,14 +5,17 @@ import { Box } from "@mui/material";
 import { exerciseOptions, fetchData, YoutubeOptions } from "../utils/fetchData";
 import Detail from "../components/Detail";
 import ExerciseVideos from "../components/ExerciseVideos";
-import SimilarExercises from "../components/SimilarExercises";
+
+interface ISomeData {
+  name: string; 
+}
 
 const ExerciseDetail = () => {
-  const [exerciseDetail, setExerciseDetail] = useState({name:"" });
+  const [exerciseDetail, setExerciseDetail] = useState<ISomeData>({ name: "" });
   const [exerciseVideos, setExerciseVideos] = useState([]);
 
   const { id } = useParams();
- 
+
   useEffect(() => {
     const fetchExerciseData = async () => {
       const exerciseDbUrl = "https://exercisedb.p.rapidapi.com";
@@ -24,7 +27,6 @@ const ExerciseDetail = () => {
         `${exerciseDbUrl}/exercises/exercise/${id}`,
         exerciseOptions
       );
-
       setExerciseDetail(exerciseDetailData);
 
       // Video Recommedation
@@ -44,7 +46,6 @@ const ExerciseDetail = () => {
         exerciseVideos={exerciseVideos}
         name={exerciseDetail.name}
       />
-      <SimilarExercises />
     </Box>
   );
 };

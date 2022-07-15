@@ -9,7 +9,7 @@ const ExerciseVideos = ({ exerciseVideos, name }: ExerciseVideoProps) => {
 
   if(!exerciseVideos) return <p>Loading....</p>
 
-  return (
+  return ( 
     <Box sx={{ marginTop: { lg: "200px", xs: "20px" } }} p="20px">
       <Typography mb="33px" variant="h3">
         Watch{" "}
